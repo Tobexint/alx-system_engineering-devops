@@ -1,4 +1,0 @@
-#!/bin/bash
-chmod u+x file 0-current_working_directory
-chmod u+x file README.md
-why?

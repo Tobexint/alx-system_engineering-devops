@@ -1,2 +1,3 @@
-script that prints the absolute pathname
+#!/bin/bash
+script that changes working directory to root directory
 why?

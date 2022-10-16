@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# bash script that creates an RSA repair key
+# name of the created private key must be school
+# created key must be protected by the passphrase betty
+# number of bits in the created key to be created 4096
+ssh-keygen -t rsa -f school -b 4096 -N betty

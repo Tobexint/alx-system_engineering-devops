@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+# File configuration for apache server
+
+
+
+service apache2 start

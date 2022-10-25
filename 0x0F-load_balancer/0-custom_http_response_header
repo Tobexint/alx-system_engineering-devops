@@ -1,6 +1,7 @@
-cript that it configures a brand new Ubuntu machine to the requirements asked
+#!/usr/bin/env bash
+# Script that it configures a brand new Ubuntu machine to the requirements asked
 
-apt-get update
-apt-get -y install nginx
-sed -i "/server_name _;/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-available/default
-service nginx restartt
+sudo apt-get update
+sudo apt-get -y install nginx
+sudo sed -i "/server_name _;/a add_header X-Served-By '$HOSTNAME';" /etc/nginx/sites-available/default
+sudo service nginx restart

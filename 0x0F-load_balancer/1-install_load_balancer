@@ -15,4 +15,5 @@ listen load-balance
         server 29939-web-01 44.210.84.85 check port 80
         server 29939-web-02 18.234.193.81 check port 80
 " >> /etc/haproxy/haproxy.cfg
+echo "ENABLED=1">>/etc/default/haproxy
 sudo service haproxy restart

@@ -53,8 +53,8 @@ frontend www-https
 
 backend www-backend
 	redirect scheme https if !{ ssl_fc }
-	server 29939-web-01 44.210.84.85 check
-	server 29939-web-02 18.234.193.81 check
+	server web-01 44.210.84.85 check
+	server web-02 18.234.193.81 check
 
 backend letsencrypt-backend
 	server letsencrypt 127.0.0.1:54321

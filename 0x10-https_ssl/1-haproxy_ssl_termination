@@ -39,12 +39,13 @@ defaults
 	option http-server-close
 
 frontend www-http
-	bind *:80
+	bind 18.215.160.13:80
+	mode http
 	reqadd X-Forwarded-Proto:\ http
 	default_backend www-backend
 
 frontend www-https
-	bind *:443 ssl crt /etc/haproxy/certs/www.tobexint.tech.pem
+	bind 18.215.160.13:443 ssl crt /etc/haproxy/certs/www.tobexint.tech.pem
 	reqadd X-Forwarded-Proto:\ https
 	acl letsencrypt-acl path_beg /.well-known/acme-challenge/
 	use_backend letsencrypt-backend if letsencrypt-acl
@@ -56,4 +57,4 @@ backend www-backend
 	server 29939-web-02 18.234.193.81 check
 
 backend letsencrypt-backend
-	server letsencrypt 127.0.0.1:28547
+	server letsencrypt 127.0.0.1:54321
